@@ -300,12 +300,12 @@
 
 	function getCanvasData(callback) {
 	  const req = new XMLHttpRequest();
-	  req.open("GET", "/pixels", true);
+	  req.open("GET", "https://api.cryptopaint.co/pixels", true);
 	  req.responseType = "arraybuffer";
 
 	  req.onload = function(oEvent) {
 	    const byteArray = new Uint8Array(req.response);
-	    const lastBlockNumber = parseInt(req.getResponseHeader('x-last-updated-block'), 16);
+	    const lastBlockNumber = parseInt(req.getResponseHeader('X-Last-Updated-Block'), 16);
 	    console.log(lastBlockNumber)
 	    callback(null, byteArray, lastBlockNumber);
 	  };
