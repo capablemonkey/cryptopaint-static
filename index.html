@@ -1,1 +1,75 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112237039-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-112237039-1');
+  </script>
+
+  <title>CryptoPaint</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+  <script src="js/lib/web3.min.js"></script>
+</head>
+<body>
+  <div id="logo-wrapper">
+    <div id="logo" class="unselectable">
+      <span id="logo-crypto">crypto</span>paint
+    </div>
+  </div>
+
+  <div id="container">
+    <div id="zoom">
+      <div id="pan">
+        <canvas width="1000" height="1000" id="canvas"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal" class="rounded-bg">
+    <h2>what is cryptopaint?</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu leo quis mauris sollicitudin maximus eget ac odio. Etiam mattis erat et vehicula pellentesque. In hac habitasse platea dictumst. Etiam eget lobortis ligula, a condimentum magna. Mauris vehicula id lorem et pretium. Maecenas metus nulla, ultricies in eros et, convallis suscipit est. Sed volutpat porta ligula sit amet efficitur.
+    </p>
+
+    <h2>metamask</h2>
+    <p>you should install it</p>
+
+    <h2>contact</h2>
+    <p>technix1@gmail.com</p>
+
+    <p>subreddit</p>
+
+
+    <div id="close-button" class="unselectable">
+      close
+    </div>
+  </div>
+
+  <div id="wat" class="rounded-bg">
+    <a href="/about.html" target="_blank" title="about" class="no-link-style">?</a>
+  </div>
+
+  <div id="toolbar">
+    <div>
+      block
+      <span id="block-number"></span>
+    </div>
+    <div id="palette">
+      <div class="color-button">
+      </div>
+    </div>
+    <span id="coordinates"></span>
+  </div>
+
+  <script src="js/index.bundle.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

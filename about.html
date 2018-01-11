@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112237039-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-112237039-1');
+  </script>
+
+  <title>CryptoPaint</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  <link rel="stylesheet" type="text/css" href="css/about.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+  <script src="js/lib/web3.min.js"></script>
+</head>
+<body>
+
+  <div id="logo">
+    <a href="/" title="home" class="no-link-style">
+    <span id="logo-crypto">crypto</span>paint
+    </a>
+  </div>
+
+  <div id="container">
+    <h2>What is this?</h2>
+    <p>CryptoCanvas is inspired by Reddit’s r/Place, Million Dollar Homepage and Cryptokitties.  There’s a 1000 pixel by 1000 pixel canvas with 4-bit color, but pixels are stored on the Ethereum blockchain. A smart contract handles the reading and writing of the 1 million pixels.  There’s a small fee of 0.001 ($1.40) to place a pixel, plus gas fees. </p>
+
+    <p>Anyone can read from and write directly to the contract, so you could build your own interface just like this one.  Its authenticity is enforced by the network, and preserved forever in the block chain.  Its decentralized nature means it can't be censored.  The shape it takes is the result of collaboration of the internet.</p>
+
+    <h2>How do I place a pixel?</h2>
+    <p>You'll need MetaMask!</p>
+
+    <h2>How long does it take for my pixel to show up?</h2>
+    <p>That depends on how busy the Ethereum network is.  Once your transaction is mined (up to a few minutes), you should see the change within seconds.  The viewer polls for new events from the contract every 5 seconds.</p>
+
+    <h2>Can I get a refund?</h2>
+    <p>Nope.  Once your transaction is sent, that's it.</p>
+
+    <h2>Can someone replace my pixel?</h2>
+    <p>Yes.</p>
+  </div>
+</body>
+</html>
