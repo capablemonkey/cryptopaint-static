@@ -168,7 +168,7 @@ class TransactionFlow {
 
   metaMaskError(error) {
     this.modalHeading.text("Transaction failed");
-    this.modalText.text("It looks like you cancelled the transaction, or there was a problem.");
+    this.modalText.text("It looks like you cancelled the transaction, or there was a problem.  Please make sure your MetaMask wallet is unlocked.");
     this.showCloseButton();
   }
 
@@ -226,8 +226,8 @@ function main() {
     cursorY: 0,
     draggingMouse: false,
     scale: 4.0,
-    translateX: 0,
-    translateY: 0,
+    translateX: 500,
+    translateY: 500,
     lastBlockNumber: 0,
     transactionFlow: null
   }
@@ -271,7 +271,7 @@ main()
 "use strict";
 
 
-const PIXEL_STORAGE_ADDRESS = '0x1b2a604320fbd8550daea931428f68d38fe00b18';
+const PIXEL_STORAGE_ADDRESS = '0xead504431dcc01142c0b9cdb9367b57932672079';
 const CONTRACT_ABI = [
   {
     "constant": true,
@@ -623,8 +623,8 @@ function setupHashUpdater(state) {
   setInterval(function() {
     window.location.hash =
       "scale=" + state.scale +
-      "&x=" + -1 * Math.round(state.translateX) +
-      "&y=" + -1 * Math.round(state.translateY);
+      "&x=" + -1 *  Math.round(state.translateX) +
+      "&y=" + -1 *  Math.round(state.translateY);
   }, 500);
 }
 
@@ -633,7 +633,7 @@ function setScale(scale) {
 }
 
 function setTranslate(x, y) {
-  $('#pan').css({'transform' : 'translate(' + x +'px, ' + y + 'px)'});
+  $('#pan').css({'transform' : 'translate(' + (x+500) +'px, ' + (y+500) + 'px)'});
 }
 
 function setupZoomHooks(state) {
