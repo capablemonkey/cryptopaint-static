@@ -1,75 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112237039-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112237039-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    gtag('config', 'UA-112237039-1');
-  </script>
+      gtag('config', 'UA-112237039-1');
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>CryptoPaint</title>
 
-  <title>CryptoPaint</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="css/base.css">
-  <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <link href="/stylesheets/global.css" rel="stylesheet" /><link href="/stylesheets/index.css" rel="stylesheet" />
+    <script src="/javascripts/site.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
-  <script src="js/lib/web3.min.js"></script>
-</head>
-<body>
-  <div id="logo-wrapper">
-    <div id="logo" class="unselectable">
-      <span id="logo-crypto">crypto</span>paint
-    </div>
-  </div>
-
-  <div id="container">
-    <div id="zoom">
-      <div id="pan">
-        <canvas width="1000" height="1000" id="canvas"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script src="javascripts/lib/web3.min.js"></script>
+  </head>
+  <body>
+    <nav class="flex gray-background">
+      <a href="/" title="home">
+        <img id="logo" src="images/logo_big.png" alt="CryptoPaint logo">
+      </a>
+      <div class="flex">
+        <a href="/" title="canvas" class="navigation-link no-link-style">canvas</a>
+        <a href="/about.html" title="about" class="navigation-link no-link-style">about</a>
+        <a href="https://reddit.com/r/cryptopaint" title="community" target="_blanks" class="navigation-link no-link-style">community</a>
       </div>
+    </nav>
+    <div id="container">
+  <div id="zoom">
+    <div id="pan">
+      <canvas width="1000" height="1000" id="canvas"></canvas>
     </div>
   </div>
+</div>
 
-  <div id="modal" class="rounded-bg">
-    <h2>what is cryptopaint?</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu leo quis mauris sollicitudin maximus eget ac odio. Etiam mattis erat et vehicula pellentesque. In hac habitasse platea dictumst. Etiam eget lobortis ligula, a condimentum magna. Mauris vehicula id lorem et pretium. Maecenas metus nulla, ultricies in eros et, convallis suscipit est. Sed volutpat porta ligula sit amet efficitur.
-    </p>
+<div id="modal">
+  <div id="modal-heading">
+  </div>
 
-    <h2>metamask</h2>
-    <p>you should install it</p>
+  <div id="modal-text">
+  </div>
 
-    <h2>contact</h2>
-    <p>technix1@gmail.com</p>
+  <div id="metamask-button-wrapper">
+    <a href="https://metamask.io/" target="_blank" title="Get MetaMask">
+      <img src="images/download-metamask-dark.png" alt="MetaMask download button" id="metamask-button">
+    </a>
+  </div>
 
-    <p>subreddit</p>
-
-
-    <div id="close-button" class="unselectable">
+  <div id="buttons-wrapper">
+    <div id="send-button" class="green-bg big-button unselectable">
+      send
+    </div>
+    <div id="close-button" class="red-bg big-button unselectable">
       close
     </div>
-  </div>
-
-  <div id="wat" class="rounded-bg">
-    <a href="/about.html" target="_blank" title="about" class="no-link-style">?</a>
-  </div>
-
-  <div id="toolbar">
-    <div>
-      block
-      <span id="block-number"></span>
+    <div id="cancel-button" class="red-bg big-button unselectable">
+      cancel
     </div>
-    <div id="palette">
-      <div class="color-button">
-      </div>
-    </div>
+  </div>
+</div>
+
+<div id="toolbar" class="gray-background">
+  <div id="info">
     <span id="coordinates"></span>
+    <div>
+      block <span id="block-number"></span>
+    </div>
   </div>
+  <div id="palette">
+    <div class="color-button">
+    </div>
+  </div>
+  <div class="counterweight"></div>
+</div>
 
-  <script src="js/index.bundle.js" type="text/javascript" charset="utf-8"></script>
-</body>
+<script src="/javascripts/index.bundle.js"></script>
+  </body>
 </html>

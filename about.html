@@ -1,50 +1,73 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112237039-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<!doctype html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112237039-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    gtag('config', 'UA-112237039-1');
-  </script>
+      gtag('config', 'UA-112237039-1');
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>CryptoPaint | About</title>
 
-  <title>CryptoPaint</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" type="text/css" href="css/base.css">
-  <link rel="stylesheet" type="text/css" href="css/about.css">
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <link href="/stylesheets/global.css" rel="stylesheet" /><link href="/stylesheets/about.css" rel="stylesheet" />
+    <script src="/javascripts/site.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
-  <script src="js/lib/web3.min.js"></script>
-</head>
-<body>
-
-  <div id="logo">
-    <a href="/" title="home" class="no-link-style">
-    <span id="logo-crypto">crypto</span>paint
-    </a>
-  </div>
-
-  <div id="container">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script src="javascripts/lib/web3.min.js"></script>
+  </head>
+  <body>
+    <nav class="flex gray-background">
+      <a href="/" title="home">
+        <img id="logo" src="images/logo_big.png" alt="CryptoPaint logo">
+      </a>
+      <div class="flex">
+        <a href="/" title="canvas" class="navigation-link no-link-style">canvas</a>
+        <a href="/about.html" title="about" class="navigation-link no-link-style">about</a>
+        <a href="https://reddit.com/r/cryptopaint" title="community" target="_blanks" class="navigation-link no-link-style">community</a>
+      </div>
+    </nav>
+    <div id="container">
+  <div class="section">
     <h2>What is this?</h2>
-    <p>CryptoCanvas is inspired by Reddit’s r/Place, Million Dollar Homepage and Cryptokitties.  There’s a 1000 pixel by 1000 pixel canvas with 4-bit color, but pixels are stored on the Ethereum blockchain. A smart contract handles the reading and writing of the 1 million pixels.  There’s a small fee of 0.001 ($1.40) to place a pixel, plus gas fees. </p>
 
-    <p>Anyone can read from and write directly to the contract, so you could build your own interface just like this one.  Its authenticity is enforced by the network, and preserved forever in the block chain.  Its decentralized nature means it can't be censored.  The shape it takes is the result of collaboration of the internet.</p>
+    <p>CryptoPaint is a 1000x1000 pixel canvas which lives on the Ethereum blockchain.  Remember Reddit’s <a href="http://mashable.com/2017/04/03/reddit-place-2017/#4WMqJl9tJaqX" target="_blank" title="Reddit r/Place article">r/Place</a>?  This is like that, or <a href="https://en.wikipedia.org/wiki/The_Million_Dollar_Homepage" target="_blank" title="The Million Dollar Homepage">The Million Dollar Homepage</a>, crossed with <a href="https://www.cryptokitties.co/" title="CryptoKitties" target="_blank">CryptoKitties</a>.  A <a href="https://etherscan.io/address/0xead504431dcc01142c0b9cdb9367b57932672079" target="_blank" title="smart contract on etherscan">smart contract</a> handles the reading and writing of the 1 million pixels.  In order to change the color of a pixel, there’s a small fee of 0.001 ETH (roughly $1), plus a gas fee for the transaction to be processed by the network.</p>
 
+    <p>Each and every change is stored on the blockchain, which means the history of this ever-changing painting cannot be edited or censored.  When you set a pixel, your change is published to the decentralized Ethereum network and eventually stored on thousands of computers around the world where it will remain forever.</p>
+
+    <p>Anyone can read from and write directly to the contract, so you could build your own interface just like this one.  The shape it takes is solely due to the collaborative hand of the internet.</p>
+
+    <p>This is intended to be an example of how the Ethereum blockchain can be used to facilitate creativity and expression.  This is also a testament to the idea that Ethereum doesn’t have to only be about ICOs and get-rich-quick schemes.</p>
+
+    <p>So, if you're bored and looking for something to do with your ether... have some fun and lay a pixel or two!  The world is watching.</p>
+  </div>
+  <div class="section">
     <h2>How do I place a pixel?</h2>
     <p>You'll need MetaMask!</p>
-
+    <a href="https://metamask.io/" target="_blank" title="Get MetaMask">
+      <img src="images/download-metamask-dark.png" alt="MetaMask download button" class="metamask-button">
+    </a>
+  </div>
+  <div class="section">
     <h2>How long does it take for my pixel to show up?</h2>
     <p>That depends on how busy the Ethereum network is.  Once your transaction is mined (up to a few minutes), you should see the change within seconds.  The viewer polls for new events from the contract every 5 seconds.</p>
-
+  </div>
+  <div class="section">
     <h2>Can I get a refund?</h2>
-    <p>Nope.  Once your transaction is sent, that's it.</p>
-
+    <p>Nope, sorry.  Once your transaction is sent, that's it. </p>
+  </div>
+  <div class="section">
     <h2>Can someone replace my pixel?</h2>
     <p>Yes.</p>
   </div>
-</body>
+</div>
+  </body>
 </html>
