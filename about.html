@@ -52,14 +52,18 @@
   </div>
   <div class="section">
     <h2>How do I place a pixel?</h2>
-    <p>You'll need MetaMask!</p>
+    <p>First, you'll need MetaMask, a digital wallet which enables your web browser to interact with the Ethereum network.</p>
     <a href="https://metamask.io/" target="_blank" title="Get MetaMask">
       <img src="images/download-metamask-dark.png" alt="MetaMask download button" class="metamask-button">
     </a>
+
+    <p>Once MetaMask is installed, make sure to unlock your MetaMask wallet by clicking on the extension icon and typing in your password.</p>
+
+    <p>When you have MetaMask unlocked, you're ready to place a pixel!  Select a color from the toolbar and click anywhere on the canvas.  You'll then be asked to confirm the transaction.  If you accept, MetaMask will pop up and prompt you to approve the transaction.  Click submit.  Your transaction will be submitted to the Ethereum network.</p>
   </div>
   <div class="section">
     <h2>How long does it take for my pixel to show up?</h2>
-    <p>That depends on how busy the Ethereum network is.  Once your transaction is mined (up to a few minutes), you should see the change within seconds.  The viewer polls for new events from the contract every 5 seconds.</p>
+    <p>That depends on how busy the Ethereum network is.  Once your transaction is mined (usually takes a few minutes, but it could take longer), you should see the change within a few seconds.  The viewer polls for new events from the contract every 5 seconds.</p>
   </div>
   <div class="section">
     <h2>Can I get a refund?</h2>
@@ -67,7 +71,17 @@
   </div>
   <div class="section">
     <h2>Can someone replace my pixel?</h2>
-    <p>Yes.</p>
+    <p>Yes.  That's part of the fun.</p>
+  </div>
+  <div class="section">
+    <h2>What are gas fees? Why are they so expensive?</h2>
+    <p>Gas is the cost required by the Ethereum network to process your transaction.  Setting a pixel requires a fixed amount of gas: about 45,000 gas.</p>
+
+    <p>The gas fee you pay is determined by the amount of gas and the gas price, which is measured in gwei (1 billion gwei = 1 ether/ETH).  For example, a gas price of 20 gwei would result in a gas fee of 45,000 gas * 20 gwei = .0009 ETH.  While Metamask automatically suggests a gas price on the confirmation step, you can choose how much you are willing to pay for 1 unit of gas.</p>
+
+    <p>If you want to be sure your transaction will succeed, and be "confirmed" quickly, you will want to specify an average or higher than average gas price.  If you want to save on gas fees, you can specify a lower than average gas price.</p>
+
+    <p>The gas price which MetaMask suggests is usually higher than average.  Check <a href="https://ethgasstation.info/" title="ETH Gas Station" target="_blank">ETH Gas Station</a> for the lastest gas price, especially the "Safe Low" price which will mean your gas fee will be cheaper but take longer to process.</p>
   </div>
 </div>
   </body>
