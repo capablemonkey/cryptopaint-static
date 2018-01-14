@@ -233,14 +233,19 @@ function main() {
   }
 
   const canvas = new Canvas(1000, $("#canvas")[0]);
-  // canvas.setRandomData();
 
   pixelStorage.getCanvasData(function(err, packedInts, lastBlockNumber) {
     const unpackedInts = pixelStorage.unpackUIntArray(packedInts);
     canvas.setDataFromInts(unpackedInts);
+    // canvas.setRandomData();
     state.lastBlockNumber = lastBlockNumber;
     $('#block-number').text(state.lastBlockNumber);
-    setupHooks(state, canvas, pixelStorage);
+
+    if (isMobile()) {
+      setupMobileHooks(state, canvas, pixelStorage);
+    } else {
+      setupHooks(state, canvas, pixelStorage);
+    };
   });
 
   hooks.initializeStateFromHash(state);
@@ -260,6 +265,21 @@ function setupHooks(state, canvas, pixelStorage) {
     hooks.setupCanvasChangePoller(state, pixelStorage, canvas);
     window.scrollTo(0, 0);
   });
+}
+
+// Mobile is read-only; hide the edit functionality and use touch-based pan and zoom
+function setupMobileHooks(state, canvas, pixelStorage) {
+  $(document).ready(function() {
+    hooks.setupAnimationHook(state, canvas);
+    hooks.setupMobileZoomHook(state);
+    hooks.setupMobilePanHook(state);
+    hooks.setupCanvasChangePoller(state, pixelStorage, canvas);
+    window.scrollTo(0, 0);
+  });
+}
+
+function isMobile() {
+  return window.matchMedia("(max-width: 700px)").matches;
 }
 
 main()
@@ -655,6 +675,32 @@ function setupZoomHooks(state) {
   });
 }
 
+function setupMobileZoomHook(state) {
+  var hammertime = new Hammer(document.body, {});
+  hammertime.get('pinch').set({ enable: true });
+  hammertime.on('pinch', function(event) {
+    setScale(state.scale * event.scale);
+  });
+
+  hammertime.on('pinchend', function(event) {
+    state.scale *= event.scale;
+  });
+}
+
+function setupMobilePanHook(state) {
+  var hammertime = new Hammer(document.body, {});
+  hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+
+  hammertime.on('panmove', function(event) {
+    setTranslate(state.translateX + event.deltaX * 0.5, state.translateY + event.deltaY * 0.5);
+  });
+
+  hammertime.on('panend', function(event) {
+    state.translateX += (event.deltaX * 0.5);
+    state.translateY += (event.deltaY * 0.5);
+  });
+}
+
 function setupPanHooks(state) {
   // click-to-drag logic:
   var mousedownX = 0;
@@ -839,7 +885,9 @@ module.exports = {
   setupCanvasClickHook: setupCanvasClickHook,
   setupHashUpdater: setupHashUpdater,
   initializeStateFromHash: initializeStateFromHash,
-  setupCanvasChangePoller: setupCanvasChangePoller
+  setupCanvasChangePoller: setupCanvasChangePoller,
+  setupMobileZoomHook: setupMobileZoomHook,
+  setupMobilePanHook: setupMobilePanHook
 }
 
 /***/ })
