@@ -140,7 +140,7 @@ class TransactionFlow {
     }
 
     this.modalHeading.text("Placing a pixel");
-    this.modalText.text("To place a pixel, you need to send 0.001 ETH (about $1.20), plus the gas fee (about 40,000 gas).");
+    this.modalText.text("To place a pixel, you need to send 0.001 ETH (about $1.30). This transaction will consume about 45,000 gas.");
 
     this.modal.show();
     $('#send-button').show();
@@ -174,7 +174,7 @@ class TransactionFlow {
 
   transactionCreated(tx_hash) {
     this.modalHeading.text("Transaction created");
-    this.modalText.text("Your transaction was created successfully!  You should see your pixel update in less than 5 minutes.");
+    this.modalText.text("Your transaction was created successfully!  You should see your pixel update in a few minutes, depending on how busy the Ethereum network is.  Your transaction ID is: " + tx_hash);
 
     this.showCloseButton();
   }

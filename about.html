@@ -40,19 +40,19 @@
   <div class="section">
     <h2>What is this?</h2>
 
-    <p>CryptoPaint is a 1000x1000 pixel canvas which lives on the Ethereum blockchain.  Remember Reddit’s <a href="http://mashable.com/2017/04/03/reddit-place-2017/#4WMqJl9tJaqX" target="_blank" title="Reddit r/Place article">r/Place</a>?  This is like that, or <a href="https://en.wikipedia.org/wiki/The_Million_Dollar_Homepage" target="_blank" title="The Million Dollar Homepage">The Million Dollar Homepage</a>, crossed with <a href="https://www.cryptokitties.co/" title="CryptoKitties" target="_blank">CryptoKitties</a>.  A <a href="https://etherscan.io/address/0xb92d13833f9044eb0c14893a4bb4cb009c209beb" target="_blank" title="smart contract on etherscan">smart contract</a> handles the reading and writing of the 1 million pixels.  In order to change the color of a pixel, there’s a small fee of 0.001 ETH (roughly $1), plus a gas fee for the transaction to be processed by the network.</p>
+    <p>CryptoPaint is a 1000x1000 pixel canvas which lives on the Ethereum blockchain.  Remember Reddit’s <a href="http://mashable.com/2017/04/03/reddit-place-2017/#4WMqJl9tJaqX" target="_blank" title="Reddit r/Place article">r/Place</a>?  This is like that, or <a href="https://en.wikipedia.org/wiki/The_Million_Dollar_Homepage" target="_blank" title="The Million Dollar Homepage">The Million Dollar Homepage</a>, crossed with <a href="https://www.cryptokitties.co/" title="CryptoKitties" target="_blank">CryptoKitties</a>.  A <a href="https://etherscan.io/address/0xb92d13833f9044eb0c14893a4bb4cb009c209beb" target="_blank" title="smart contract on etherscan">smart contract</a> handles the reading and writing of the 1 million pixels.  In order to change the color of a pixel, there’s a small fee of 0.001 ETH (roughly $1.30 at the time of this writing), plus a gas fee for the transaction to be processed by the network. These fees help prevent abuse from bots.</p>
 
     <p>Each and every change is stored on the blockchain, which means the history of this ever-changing painting cannot be edited or censored.  When you set a pixel, your change is published to the decentralized Ethereum network and eventually stored on thousands of computers around the world where it will remain forever.</p>
 
-    <p>Anyone can read from and write directly to the contract, so you could build your own interface just like this one.  The shape it takes is solely due to the collaborative hand of the internet.</p>
+    <p>Anyone can read from and write directly to the contract, so you could build your own interface just like this one.</p>
 
-    <p>This is intended to be an example of how the Ethereum blockchain can be used to facilitate creativity and expression.  This is also a testament to the idea that Ethereum doesn’t have to only be about ICOs and get-rich-quick schemes.</p>
+    <p>This is intended to be an example of how the Ethereum blockchain can be used to facilitate creativity and expression.  Ethereum doesn’t have to only be about ICOs and the ownership of virtual assets.</p>
 
     <p>So, if you're bored and looking for something to do with your ether... have some fun and lay a pixel or two!  The world is watching.</p>
   </div>
   <div class="section">
-    <h2>How do I place a pixel?</h2>
-    <p>First, you'll need MetaMask, a digital wallet which enables your web browser to interact with the Ethereum network.</p>
+    <h3>How do I place a pixel?</h3>
+    <p>First, you'll need MetaMask, a digital wallet which enables your web browser to interact with the Ethereum network.  The CryptoKitties FAQ has a <a href="https://www.cryptokitties.co/faq#Installing-MetaMask-your-digital-wallet" target="_blank" title="CryptoKitties FAQ">great tutorial</a> on how to install MetaMask.</p>
     <a href="https://metamask.io/" target="_blank" title="Get MetaMask">
       <img src="images/download-metamask-dark.png" alt="MetaMask download button" class="metamask-button">
     </a>
@@ -62,19 +62,19 @@
     <p>When you have MetaMask unlocked, you're ready to place a pixel!  Select a color from the toolbar and click anywhere on the canvas.  You'll then be asked to confirm the transaction.  If you accept, MetaMask will pop up and prompt you to approve the transaction.  Click submit.  Your transaction will be submitted to the Ethereum network.</p>
   </div>
   <div class="section">
-    <h2>How long does it take for my pixel to show up?</h2>
+    <h3>How long does it take for my pixel to show up?</h3>
     <p>That depends on how busy the Ethereum network is.  Once your transaction is mined (usually takes a few minutes, but it could take longer), you should see the change within a few seconds.  The viewer polls for new events from the contract every 5 seconds.</p>
   </div>
   <div class="section">
-    <h2>Can I get a refund?</h2>
+    <h3>Can I get a refund?</h3>
     <p>Nope, sorry.  Once your transaction is sent, that's it. </p>
   </div>
   <div class="section">
-    <h2>Can someone replace my pixel?</h2>
+    <h3>Can someone replace my pixel?</h3>
     <p>Yes.  That's part of the fun.</p>
   </div>
   <div class="section">
-    <h2>What are gas fees? Why are they so expensive?</h2>
+    <h3>What are gas fees? Why are they so expensive?</h3>
     <p>Gas is the cost required by the Ethereum network to process your transaction.  Setting a pixel requires a fixed amount of gas: about 45,000 gas.</p>
 
     <p>The gas fee you pay is determined by the amount of gas and the gas price, which is measured in gwei (1 billion gwei = 1 ether/ETH).  For example, a gas price of 20 gwei would result in a gas fee of 45,000 gas * 20 gwei = .0009 ETH.  While Metamask automatically suggests a gas price on the confirmation step, you can choose how much you are willing to pay for 1 unit of gas.</p>
@@ -82,6 +82,11 @@
     <p>If you want to be sure your transaction will succeed, and be "confirmed" quickly, you will want to specify an average or higher than average gas price.  If you want to save on gas fees, you can specify a lower than average gas price.</p>
 
     <p>The gas price which MetaMask suggests is usually higher than average.  Check <a href="https://ethgasstation.info/" title="ETH Gas Station" target="_blank">ETH Gas Station</a> for the lastest gas price, especially the "Safe Low" price which will mean your gas fee will be cheaper but take longer to process.</p>
+  </div>
+
+  <div class="section">
+    <h3>How can I see the transactions I sent?</h3>
+    <p>Click on the MetaMask extension, which tracks every transaction sent from your wallet.  From there, you'll be able to see whether a transaction has failed, was successful, is pending, or taking a long time because the gas price was too low.</p>
   </div>
 </div>
   </body>
