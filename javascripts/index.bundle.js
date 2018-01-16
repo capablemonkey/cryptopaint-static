@@ -226,8 +226,8 @@ function main() {
     cursorY: 0,
     draggingMouse: false,
     scale: 4.0,
-    translateX: -500,
-    translateY: -500,
+    translateX: -563,
+    translateY: -534,
     lastBlockNumber: 0,
     transactionFlow: null
   }
