@@ -628,6 +628,8 @@ function initializeStateFromHash(state) {
   const matches = hash.match(/^#scale=(\d+)&x=(\d+)&y=(\d+)$/);
 
   if (matches == null) {
+    setScale(state.scale);
+    setTranslate(state.translateX, state.translateY);
     return;
   }
 
