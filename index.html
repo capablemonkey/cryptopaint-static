@@ -20,11 +20,11 @@
     <meta property="og:site_name" content="CryptoPaint">
     <meta property="og:description" content="CryptoPaint is a 1000x1000 pixel canvas which lives on the Ethereum blockchain. ">
     <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title || "CryptoPaint" %></title>
+    <title>CryptoPaint</title>
 
-    <%= stylesheet_link_tag "site" %>
-    <%= stylesheet_link_tag (current_page.data.stylesheet ? current_page.data.stylesheet : {}) %>
-    <%= javascript_include_tag "site" %>
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <link href="/stylesheets/index.css" rel="stylesheet" />
+    <script src="/javascripts/site.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" type="text/javascript" charset="utf-8"></script>
@@ -42,6 +42,54 @@
         <a href="https://reddit.com/r/cryptopaint" title="community" target="_blanks" class="navigation-link no-link-style">community</a>
       </div>
     </nav>
-    <%= yield %>
+    <div id="container">
+  <div id="zoom">
+    <div id="pan">
+      <canvas width="1000" height="1000" id="canvas"></canvas>
+    </div>
+  </div>
+</div>
+
+<div id="modal">
+  <div id="modal-heading">
+  </div>
+
+  <div id="modal-text">
+  </div>
+
+  <div id="metamask-button-wrapper">
+    <a href="https://metamask.io/" target="_blank" title="Get MetaMask">
+      <img src="images/download-metamask-dark.png" alt="MetaMask download button" id="metamask-button">
+    </a>
+  </div>
+
+  <div id="buttons-wrapper">
+    <div id="send-button" class="green-bg big-button unselectable">
+      send
+    </div>
+    <div id="close-button" class="red-bg big-button unselectable">
+      close
+    </div>
+    <div id="cancel-button" class="red-bg big-button unselectable">
+      cancel
+    </div>
+  </div>
+</div>
+
+<div id="toolbar" class="gray-background">
+  <div id="info">
+    <span id="coordinates"></span>
+    <div>
+      block <span id="block-number"></span>
+    </div>
+  </div>
+  <div id="palette">
+    <div class="color-button">
+    </div>
+  </div>
+  <div class="counterweight"></div>
+</div>
+
+<script src="/javascripts/index.bundle.js"></script>
   </body>
 </html>

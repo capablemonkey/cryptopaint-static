@@ -1,9 +1,48 @@
----
-title: CryptoPaint | About
-stylesheet: "stylesheets/about.css"
----
+<!doctype html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112237039-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-<div id="container">
+      gtag('config', 'UA-112237039-1');
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:title" content="CryptoPaint">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.cryptopaint.co">
+    <meta property="og:image" content="https://www.cryptopaint.co/images/logo_500px.png">
+    <meta property="og:site_name" content="CryptoPaint">
+    <meta property="og:description" content="CryptoPaint is a 1000x1000 pixel canvas which lives on the Ethereum blockchain. ">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>CryptoPaint | About</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <link href="/stylesheets/about.css" rel="stylesheet" />
+    <script src="/javascripts/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="javascripts/lib/web3.min.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+    <nav class="flex gray-background">
+      <a href="/" title="home">
+        <img id="logo" src="images/logo_big.png" alt="CryptoPaint logo">
+      </a>
+      <div class="flex">
+        <a href="/" title="canvas" class="navigation-link no-link-style">canvas</a>
+        <a href="/about.html" title="about" class="navigation-link no-link-style">about</a>
+        <a href="https://reddit.com/r/cryptopaint" title="community" target="_blanks" class="navigation-link no-link-style">community</a>
+      </div>
+    </nav>
+    <div id="container">
   <div class="section">
     <h2>What is this?</h2>
 
@@ -56,3 +95,5 @@ stylesheet: "stylesheets/about.css"
     <p>Click on the MetaMask extension, which tracks every transaction sent from your wallet.  From there, you'll be able to see whether a transaction has failed, was successful, is pending, or taking a long time because the gas price was too low.</p>
   </div>
 </div>
+  </body>
+</html>
